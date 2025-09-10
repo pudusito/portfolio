@@ -10,57 +10,30 @@ export default function Landing() {
   };
 
   return (
-    <section className="relative flex items-center justify-center bg-transparent h-full w-full px-4 overflow-auto">
-        <div className='fixed top-1/2 left-[5%] transform -translate-y-1/2 max-w-4xl text-center'>
-            <AnimatedContent
-            distance={150}
-            direction="horizontal"
-            reverse={true}
-            duration={1.2}
-            ease="bounce.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.1}
-            threshold={0.2}
-            delay={0.5}>
+    <>
+      <section className="relative flex items-center justify-center bg-transparent h-full w-full px-4 overflow-auto">
+          <div className='fixed top-1/2 md:left-[3rem] transform -translate-y-1/2 max-w-4xl text-center '>
+              <AnimatedContent
+              distance={150}
+              direction="horizontal"
+              reverse={true}
+              duration={1.2}
+              ease="bounce.out"
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1.1}
+              threshold={0.2}
+              delay={0.5}>
 
-              <GradientText
-                colors={["#40ffaa", "#40b0ff", "#4079ff", "#8a00ff", "#b34fff"]}
-                animationSpeed={10}
-                showBorder={false}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-4 sm:mb-6"
-              >
-                Nice to meet you!<br/>
-              </GradientText>
-              
-              <div className="flex justify-center w-full mb-4 sm:mb-6">
-                <div className="flex flex-row items-center gap-2 sm:gap-4">
-                  <GradientText
-                    colors={["#40ffaa", "#40b0ff", "#4079ff", "#8a00ff", "#b34fff"]}
-                    animationSpeed={10}
-                    showBorder={false}
-                    className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-                  >
-                    Im
-                  </GradientText>
-                  <GradientText 
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" 
-                    colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]} 
-                    animationSpeed={10}
-                    showBorder={false}>
-                    @Pudu<i className="bi bi-person-fill-check"></i><br/>
-                  </GradientText>
-                </div>
-              </div>
-              
-                <GradientText 
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl p-2 mb-6 sm:mb-8" 
-                  colors={["#40ffaa", "#40b0ff", "#4079ff", "#8a00ff", "#b34fff"]} 
+                <GradientText
+                  colors={["#40ffaa", "#40b0ff", "#4079ff", "#8a00ff", "#b34fff"]}
                   animationSpeed={10}
-                  showBorder={false}>
-                  technical analyst programmer student
+                  showBorder={false}
+                  className="flex flex-column md:flex-row text-[clamp(2rem,5vw,6rem)]"
+                >
+                   &lt;/&gt;  ¡ Hola Mundo !<br/>
                 </GradientText>
-                
+
                 <div className="mt-4 sm:mt-6 lg:mt-8 justify-center items-center">
                 <button 
                   onClick={goToHome} 
@@ -71,9 +44,13 @@ export default function Landing() {
                   </span>
                 </button>
                 </div>
-            </AnimatedContent>
-        </div>
-    </section>  
-
+              </AnimatedContent>
+          </div>
+          <div className="absolute bottom-0 right-0 text-gray-800 text-[1rem] ">
+            by Pudu
+          </div>
+      </section>  
+    </>
   );
 }
+

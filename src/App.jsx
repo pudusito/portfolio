@@ -7,7 +7,8 @@ import Technologies from "./pages/Technologies";
 import Proyects from "./pages/Proyects";
 import Gallery from "./pages/Gallery";
 import Landing from "./pages/Landing";
-import Scene from "./pages/Scene";
+
+import LandingCanvas from "./components/LandingCanvas";
 
 function AppContent() {
   const location = useLocation();
@@ -28,7 +29,7 @@ function AppContent() {
         { path: "/About", ref: aboutRef },
         { path: "/Technologies", ref: techRef },
         { path: "/Proyects", ref: proyectsRef },
-        { path: "Gallery", ref: galleryRef},
+        { path: "/Gallery", ref: galleryRef},
       ];
 
       sections.forEach(({ path, ref }) => {
@@ -62,14 +63,16 @@ function AppContent() {
   return (
     <div className="relative w-dvw h-dvh bg-white">
 
-      {/* Fondo */}
-      <div className="fixed w-full h-full z-0 pointer-events-none bg-black/99">
-        <Scene />
+      {isLanding && (
+      <div className="fixed w-full h-full z-0 pointer-events-none bg-[#000319]">
+        <LandingCanvas />
       </div>
+      )}
+
 
       {/* Header */}
       {!isLanding && (
-        <header className="relative top-0 w-full overflow-hidden backdrop-blur-sm">
+        <header className="fixed z-50 top-0 w-[99%] overflow-hidden">
             <Header refs={{ aboutRef, techRef, proyectsRef , galleryRef}} onNavClick={handleNavClick}/>
         </header>
       )}

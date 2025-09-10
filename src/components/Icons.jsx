@@ -35,29 +35,29 @@ function Icon({ src, label, link, size = "w-16 h-16", labelStyle= "my-1 text-[1r
 }
 
 // 🔹 JS STACK
-export const JavascriptIcon = () => <Icon src={jsLogo} label="JAVASCRIPT" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript" />;
+export const JavascriptIcon = () => <Icon src={jsLogo} label="JavaScript" link="https://developer.mozilla.org/en-US/docs/Web/JavaScript" />;
 export const Html5Icon = () => <Icon src={html5Logo} label="HTML5" link="https://developer.mozilla.org/en-US/docs/Web/HTML"  />;
 export const CssIcon = () => <Icon src={cssLogo} label="CSS" link="https://developer.mozilla.org/en-US/docs/Web/CSS"  />;
 
-export const ViteIcon = () => <Icon src={viteLogo} label="VITE" link="https://vite.dev" size="w-12 h-12" />;
-export const ReactIcon = () => <Icon src={reactLogo} label="REACT" link="https://react.dev" size="w-12 h-12" />;
-export const TailwindIcon = () => <Icon src={tailwindLogo} label="TAILWIND" link="https://tailwindcss.com"  size="w-12 h-12"/>;
-export const BootstrapIcon = () => <Icon src={bootstrapLogo} label="BOOTSTRAP" link="https://getbootstrap.com" size="w-12 h-12"  />;
-export const ThreejsIcon = () => <Icon src={threejsLogo} label="THREEJS" link="https://threejs.org" size="w-12 h-12" />;
+export const ViteIcon = () => <Icon src={viteLogo} label="Vite" link="https://vite.dev" size="w-12 h-12" />;
+export const ReactIcon = () => <Icon src={reactLogo} label="React" link="https://react.dev" size="w-12 h-12" />;
+export const TailwindIcon = () => <Icon src={tailwindLogo} label="Tailwind" link="https://tailwindcss.com"  size="w-12 h-12"/>;
+export const BootstrapIcon = () => <Icon src={bootstrapLogo} label="Bootstrap" link="https://getbootstrap.com" size="w-12 h-12"  />;
+export const ThreejsIcon = () => <Icon src={threejsLogo} label="ThreeJS" link="https://threejs.org" size="w-12 h-12" />;
 
 // 🔹 PY STACK
-export const PythonIcon = () => <Icon src={pyLogo} label="PYTHON" link="https://www.python.org" />;
+export const PythonIcon = () => <Icon src={pyLogo} label="Python" link="https://www.python.org" />;
 
 // 🔹 SO
-export const LinuxIcon = () => <Icon src={linuxLogo} label="LINUX" link=""  />;
-export const Windows95Icon = () => <Icon src={windowsLogo} label="WINDOWS" link="" />;
+export const LinuxIcon = () => <Icon src={linuxLogo} label="Linux" link=""  />;
+export const Windows95Icon = () => <Icon src={windowsLogo} label="Windows" link="" />;
 
 // 🔹 DATABASES
 export const SqlIcon = () => <Icon src={sqlLogo} label="SQL" link="https://www.mysql.com"/>;
-export const SqliteIcon = () => <Icon src={sqlliteLogo} label="SQLITE" link="https://www.sqlite.org"  />;
-export const WorkbenchIcon = () => <Icon src={mysqlworkbenchLogo} label="WORKBENCH" link="https://www.mysql.com/products/workbench/" />;
-export const MongodbIcon = () => <Icon src={mongodbLogo} label="MONGODB" link="" />;
+export const SqliteIcon = () => <Icon src={sqlliteLogo} label="SQL lite" link="https://www.sqlite.org"  />;
+export const WorkbenchIcon = () => <Icon src={mysqlworkbenchLogo} label="Workbench" link="https://www.mysql.com/products/workbench/" />;
+export const MongodbIcon = () => <Icon src={mongodbLogo} label="MongoDB" link="" />;
 
-export const PowerbiIcon = () => <Icon src={powerbiLogo} label="POWERBI" link=""/>;
-export const ExcelIcon = () => <Icon src={excelLogo} label="EXCEL" link=""  />;
-export const KnimeLogo = () => <Icon src={knimeLogo} label="KNIME" link=""  />;
+export const PowerbiIcon = () => <Icon src={powerbiLogo} label="PowerBI" link=""/>;
+export const ExcelIcon = () => <Icon src={excelLogo} label="Excel" link=""  />;
+export const KnimeLogo = () => <Icon src={knimeLogo} label="Knime" link=""  />;

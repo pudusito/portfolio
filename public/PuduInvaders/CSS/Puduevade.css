@@ -1,0 +1,83 @@
+/* Pudu game*/
+#canvas {
+    background-color: black;
+    width: 512px;
+    height: 512px;
+    margin-top: 0;
+    margin-left: 3.5px;
+
+}
+
+h1 {
+  margin: 0;          
+  padding: 0;
+  display: inline-block; /* Ajusta al contenido */
+  line-height: 0;        /* Evita espacio vertical */
+  
+  border-width: 15px;  
+  border-style: solid; 
+  border-image: linear-gradient(to right, #00c43bd2, #004103) 1 1 1 1; 
+
+}
+
+h1 img{
+  display: block; /* ✅ Elimina el espacio debajo de la imagen */
+  width: 100%;    /* Escala si quieres que llene el h1 */
+  height: auto;
+}
+
+
+#gameContainer {
+  width: 520px;
+  height: 650px;
+
+  position: absolute;
+  top: 0%;                /* Centra verticalmente */
+  right: 40%;               /* Separado del borde derecho */
+  transform: scale(0.8); /* Reduce a la mitad */
+  background-color: #000000af;
+}
+
+#gameContainer p {
+  font-family: 'Courier New', Courier, monospace;
+  color:rgb(255, 255, 255);
+  background-color: #000000af;
+
+  position: relative;
+  margin: 0;
+  padding: 5%;
+  text-align: left;
+
+}
+
+.iniciar {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  padding: 5px 30px;
+  font-size: 20px;
+  background-color: #228B22;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+}
+
+.reiniciar {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  padding: 5px 25px;
+  font-size: 18px;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+}

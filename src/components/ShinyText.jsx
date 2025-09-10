@@ -1,6 +1,6 @@
 import './reactbits.css';
 
-const ShinyText = ({ text, disabled = false, speed = '6', className = '' }) => {
+const ShinyText = ({ text, disabled = false, speed = '120', className = '' }) => {
   const animationDuration = `${speed}s`;
 
   return (
