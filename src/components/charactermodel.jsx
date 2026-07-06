@@ -10,7 +10,12 @@ function Modelchar() {
   // movimiento automatico
   useFrame(() => {
     if (ref.current) {
-      ref.current.position.x += 0.1;
+      ref.current.position.x += 0.5;
+      ref.current.position.y += -0.1;
+      ref.current.position.z += -0.2;
+      ref.current.rotation.y += -0.0001;
+      ref.current.rotation.z += 0.0001;
+
     }
   });
 
