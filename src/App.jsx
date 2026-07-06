@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Header from "./pages/Header";
 import TopFooter from "./pages/TopFooter";
 import Footer from "./pages/Footer"
-import About from "./pages/About";
+import { Welcome, About } from "./pages/About";
 import Technologies from "./pages/Technologies";
 import Work from "./pages/Work";
 import Personal_Proyects from "./pages/Personal_Proyects";
@@ -26,6 +26,7 @@ function AppContent() {
   const isLoad = location.pathname === "/";
 
   const homeRef = useRef(null);
+  const welcomeRef = useRef(null)
   const mainRef = useRef(null);
   const aboutRef = useRef(null);
   const techRef = useRef(null);
@@ -112,12 +113,13 @@ function AppContent() {
       <main ref={mainRef} className="fixed w-full h-full overflow-y-auto" style={{ scrollbarWidth: "auto", scrollbarColor: "#d1d1d1 #2c2c2c" }}>
         {!isLoad  && (
           <>
-            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-b from-[#14002e] to-[#000319]"}`} ref={homeRef}><Home /></section>
-            <section className={`${mainTransparent ? "bg-transparent" :"bg-[#000319]"}`} ref={aboutRef}><About /></section>
-            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-b from-[#000319] via-[#1b0031] to-[#000319]"}`} ref={techRef}><Technologies /></section>
-            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-br from-[#000319] via-[#000319] to-[#212c80]"}`} ref={workRef}><Work /></section>
-            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-tr from-[#000319] via-[#000319] to-[#212c80]"}`} ref={personalProyectsRef}><Personal_Proyects /></section>
-            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-tr from-[#000319] via-[#000319] to-[#212c80]"}`} ref={galleryRef}><Gallery /></section>
+            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-b from-[#14002e] to-[#000319]"}`} ref={homeRef} id="home"><Home /></section>
+            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-b from-[#14002e] to-[#000319]"}`} ref={welcomeRef} id="welcome"><Welcome /></section>
+            <section className={`${mainTransparent ? "bg-transparent" :"bg-[#000319]"}`} ref={aboutRef} id="about"><About /></section>
+            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-b from-[#000319] via-[#1b0031] to-[#000319]"}`} ref={techRef} id="technologies"><Technologies /></section>
+            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-br from-[#000319] via-[#000319] to-[#212c80]"}`} ref={workRef} id="work"><Work /></section>
+            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-tr from-[#000319] via-[#000319] to-[#212c80]"}`} ref={personalProyectsRef} id="personal_proyects"><Personal_Proyects /></section>
+            <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-tr from-[#000319] via-[#000319] to-[#212c80]"}`} ref={galleryRef} id="gallery"><Gallery /></section>
             <section className="bg-gradient-to-b from-[#14002e] to-[#000319]" ref={footerRef}><Footer /></section>
           </>
         )}

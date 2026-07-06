@@ -8,7 +8,7 @@ import i18n from "../idiom";
 import { useTranslation } from "react-i18next";
 
 export default function Header({ refs, onNavClick }) {
-  const { aboutRef, techRef, workRef, personalProyectsRef, galleryRef } = refs;
+  const { homeRef, aboutRef, techRef, workRef, personalProyectsRef, galleryRef } = refs;
   const [open, setOpen] = useState(false);
 
   const [idiom, setIdiom] = useState("es");
@@ -49,6 +49,13 @@ export default function Header({ refs, onNavClick }) {
                           md:gap-[0.5rem] lg:gap-[1rem] xl:gap-[2rem]
                           px-[0.1rem]
                           py-[0.1rem]">
+
+            <button  onClick={() => onNavClick(homeRef, "/Home")}
+                     className="bg-gray-900 rounded-3 shadow hover:bg-sky-400/50 whitespace-nowrap
+                                md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
+
+              <ShinyText text={t("home")} disabled={false} className="custom-class" />
+            </button>
 
             <button  onClick={() => onNavClick(aboutRef, "/About")}
                      className="bg-gray-900 rounded-3 shadow hover:bg-sky-400/50 whitespace-nowrap

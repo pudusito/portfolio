@@ -8,7 +8,7 @@ import Preloader from "../components/preLoader";
 import Scene from "./Scene";
 
 
-export default function Load() {
+export default function Landing() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true); 
 

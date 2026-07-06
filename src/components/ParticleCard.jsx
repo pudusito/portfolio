@@ -82,7 +82,7 @@ const ParticleCard = ({
   }, [handleMouseMove, handleMouseLeave, handleClick]);
 
   return (
-    <div ref={cardRef} className={`relative overflow-hidden ${className}`}>
+    <div ref={cardRef} className={`relative w-[100%] h-[100%] overflow-hidden ${className}`}>
       {children}
     </div>
   );
