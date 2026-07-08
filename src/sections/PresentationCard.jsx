@@ -56,7 +56,7 @@ export default function PresentationCard() {
             </span>
 
             {/* carreer */}
-            <div className='border border-white px-1.5 py-0.5 rounded text-[clamp(1.2rem,5vw,2rem)] text-nowrap'>
+            <div className='px-1.5 py-0.5 rounded text-[clamp(1.2rem,5vw,2rem)] text-nowrap'>
               <span>{t("title")}</span><br />
               <span>{t("title2")}</span><br />
               <span>{t("title3")}</span>
