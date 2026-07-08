@@ -24,7 +24,7 @@ function Modelchar() {
       ref={ref}
       object={scene}
       scale={0.1}
-      position={[-150, 0, 0]}
+      position={[-170, 40, 100]}
       rotation={[0, 800, 0]}
     />
   );

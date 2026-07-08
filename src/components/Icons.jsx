@@ -26,7 +26,7 @@ function Icon({ src, label, size = "w-7 h-7 md:w-16 md:h-16", labelStyle= "my-1 
         <img
           src={src}
           alt={`${label} logo`}
-          className={`p-2 ${size} rounded-full bg-gray-100 hover:bg-cyan-500/50 hover:scale-110 transition duration-300`}
+          className={`p-2 ${size} rounded-full bg-gray-100/30 hover:bg-cyan-500/50 hover:scale-110 transition duration-300`}
         />
       </a>
       <span className={labelStyle}>{label}</span>

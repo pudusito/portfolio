@@ -1,7 +1,7 @@
 import FadeContent from '../components/FadeContent';
 import avatar from '/assets/img/avatar.jpg'
 import "../components/Neon.css";
-
+import ParticleCard from "../components/ParticleCard"
 
 import { useTranslation } from "react-i18next";
 
@@ -12,14 +12,12 @@ export default function PresentationCard() {
   return (
     <>
       {/* Presentation Card */}
-      <section className='relative w-full h-full pt-[5%] bg-transparent'>
-
-        {/* animation init */}
-        <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
+      <section className='relative w-full h-full pt-[5%] bg-transparent flex justify-center align-center'>
 
         {/* marco contenedor */}
-        <div className='flex flex-col justify-center items-center w-full h-full text-white tracking-wide text-center'>
-        
+        <div className='flex flex-col justify-center items-center w-fit h-full text-white tracking-wide text-center'>
+          
+          <ParticleCard>
           {/* neon border*/}
           <div className="flex flex-col items-center justify-end gap-y-4  p-[1rem] m-[1rem] md:mr-[3rem] border-transparent rounded-4 
                           bg-[#0040c92f] neon-border ">
@@ -52,15 +50,17 @@ export default function PresentationCard() {
               <span className="text-[clamp(1rem,5vw,1.5rem)]  text-purple-400">
                 {t("tag1")}&nbsp;
               </span>
-              <span className="text-[clamp(1rem,5vw,1.5rem)] ">
+              <span className="text-[clamp(1rem,5vw,1.5rem)] text-nowrap">
                 Benjamin Maldonado
               </span>
             </span>
 
             {/* carreer */}
-            <span className='border border-white px-1.5 py-0.5 rounded text-[clamp(1.2rem,5vw,2rem)]  text-nowrap'>
-              {t("title")}
-            </span>
+            <div className='border border-white px-1.5 py-0.5 rounded text-[clamp(1.2rem,5vw,2rem)] text-nowrap'>
+              <span>{t("title")}</span><br />
+              <span>{t("title2")}</span><br />
+              <span>{t("title3")}</span>
+            </div>
 
             {/* description */}
             <div className='text-center max-w-xs sm:max-w-sm md:max-w-md font-light text-xs sm:text-sm leading-snug px-2'>
@@ -73,11 +73,10 @@ export default function PresentationCard() {
             </div>
 
           </div>
-          
+          </ParticleCard>
         </div>
 
         {/* animation close */}
-        </FadeContent>
       </section>
     </>
   );
