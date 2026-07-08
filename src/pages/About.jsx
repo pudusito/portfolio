@@ -22,11 +22,8 @@ export function About() {
   
   return (
     <>
-
         <WhatIdo />
-
         <MoreAbout />
-
     </>
   );
 }

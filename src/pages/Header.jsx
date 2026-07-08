@@ -23,7 +23,7 @@ export default function Header({ refs, onNavClick }) {
 
   return (
     <>
-    <div className="relative flex items-center justify-between mx-2 py-2.5 md:py-3 lg:py-3 xl:py-3">
+    <div className="relative flex items-center justify-between py-2.5 md:py-3 lg:py-3 xl:py-3">
     
       {/* Logo */}
       <div className="flex-shrink-0 items-center object-center w-15 h-15 md:w-25 md:h-25 object-contain backdrop-blur-sm bg-cyan-700/50 hover:bg-cyan-700/90 rounded-full hover:scale-110">

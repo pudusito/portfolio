@@ -2,66 +2,68 @@ body {
     background-color:#004103;
     margin: 0;
     padding: 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
-#canvas {
-    background-color: transparent;
-    width: 100%;
-    height: fit-content;
-    aspect-ratio: 1 / 1;
-    margin: 0;
-    display: block;
-}
-
-h1 {
-  margin: 0;          
-  padding: 0;
-  display: inline-block; /* Ajusta al contenido */
-  line-height: 0;        /* Evita espacio vertical */
-  
-  border-width: 15px;  
-  border-style: solid; 
-  border-image: linear-gradient(to right, #00c43bd2, #004103) 1 1 1 1; 
-
-}
-
-h1 img{
-  display: block; /* ✅ Elimina el espacio debajo de la imagen */
-  width: 100%;    /* Escala si quieres que llene el h1 */
-  height: auto;
-}
-
-
-#gameContainer {
-  width: 100%;
-  max-width: 520px;   /* 🔹 límite en desktop */
-  aspect-ratio: 520 / 650; /* 🔹 mantiene la proporción */
-  margin: 0 auto;     /* 🔹 centrado horizontal */
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   
   background-color: #000000af;
   position: relative;
-  transform: none;    /* ❌ fuera el scale fijo */
+  transform: none;    
   right: auto;
   top: auto;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
 }
 
-#gameContainer p {
+.botonContainer {
   font-family: 'Courier New', Courier, monospace;
   color:rgb(255, 255, 255);
   background-color: #0000008e;
-
   position: relative;
   margin: 0;
-  padding: 10%;
+  width: 100%;
   text-align: left;
+  align-self: center;
+}
 
+h1 {
+  width: 100%;
+  margin: 0;          
+  padding: 0;
+  display: inline-block; 
+  line-height: 0;       
+  border-style: solid; 
+  border: none;
+}
+
+h1 img{
+  display: block; 
+  width: 100%;  
+  height: auto;
+}
+
+.canvas {
+    background-color: transparent;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    display: block;
+    width: 100%;
 }
 
 .iniciar {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 75%;
   transform: translate(-50%, -50%);
-  padding: 5px 30px;
+  padding: 0.5rem 1rem;
   font-size: 20px;
   background-color: #228B22;
   color: white;
@@ -73,13 +75,13 @@ h1 img{
 }
 
 .reiniciar {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 75%;
   transform: translate(-50%, -50%);
-  padding: 5px 25px;
-  font-size: 18px;
-  background-color: #8B0000;
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  background-color: #bb0000;
   color: white;
   border: none;
   border-radius: 50px;
@@ -88,18 +90,18 @@ h1 img{
   display: none;
 }
 
-/* Controles móviles responsivos */
+
 #mobileControls {
-  position: fixed !important;
-  right: 5vw !important;
-  bottom: 3vh !important;
-  left: auto !important;
+  position: absolute;
+  right: 0;
+  bottom: 3vh;
+  left: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  z-index: 99999 !important;
-  user-select: none;
+  z-index: 99999;
+  --user-select: none;
   pointer-events: auto;
 }
 
@@ -119,6 +121,7 @@ h1 img{
   margin: 0 5px;
   transition: background 0.2s, transform 0.2s;
 }
+
 #mobileControls .mobile-btn:active {
   background: #228B22;
   transform: scale(0.95);
@@ -129,11 +132,4 @@ h1 img{
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-/* Solo mostrar en pantallas pequeñas */
-@media (min-width: 700px) {
-  #mobileControls {
-    display: none !important;
-  }
 }

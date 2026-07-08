@@ -102,7 +102,7 @@ function AppContent() {
 
       {/* Header */}
       {!isLoad && (
-        <header className="fixed z-50 top-0 w-[99%] overflow-hidden">
+        <header className="fixed z-50 top-0 w-[100%] overflow-hidden">
             <Header refs={{ homeRef, aboutRef, techRef, workRef , personalProyectsRef, galleryRef}} onNavClick={handleNavClick}
             onToggleMainBg={() => setMainTransparent(prev => !prev)}
             />
@@ -110,7 +110,7 @@ function AppContent() {
       )}
 
       {/* Main */}
-      <main ref={mainRef} className="fixed w-full h-full overflow-y-auto" style={{ scrollbarWidth: "auto", scrollbarColor: "#d1d1d1 #2c2c2c" }}>
+      <main ref={mainRef} className="w-full h-full overflow-y-auto" style={{ scrollbarWidth: "auto", scrollbarColor: "#d1d1d1 #2c2c2c" }}>
         {!isLoad  && (
           <>
             <section className={`${mainTransparent ? "bg-transparent" :"bg-gradient-to-b from-[#14002e] to-[#000319]"}`} ref={homeRef} id="home"><Home /></section>

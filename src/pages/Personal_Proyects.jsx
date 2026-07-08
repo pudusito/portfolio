@@ -11,7 +11,7 @@ export default function Personal_Proyects() {
   const { t } = useTranslation("personalProyects");
 
   return (
-    <section className="relative w-full h-full flex flex-col justify-center items-center isolate overflow-hidden bg-transparent p-6 ">
+    <section className="relative w-full h-full flex flex-col justify-center items-center overflow-hidden bg-transparent p-6 ">
 
       <span className="text-[2rem] md:text-[5rem] text-white permanent-marker-regular drop-shadow-lg flex justify-center items-center text-center"
            style={{textShadow: "3px 3px 0 black, -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black"}}>
@@ -43,14 +43,14 @@ export default function Personal_Proyects() {
 
         {/* Modal Game */}
         {showGame && (
-          <div className="fixed inset-0 bg-black/90 flex flex-col items-center justify-center" style={{ zIndex: 999 }}>
+          <div className="fixed w-[100%] h-[100%] inset-0 bg-black/90 flex flex-col items-center justify-center" style={{ zIndex: 999 }}>
             <div className='relative flex justify-center items-center my-[1rem] '>
             <button className="border-2 bg-red-800/50 active:bg-red-600 text-white px-10 py-2 rounded hover:bg-red-800"
                     onClick={() => setShowGame(false)}>
               <i class="bi bi-x-lg text-white"></i>
             </button>
             </div>
-            <div className="relative h-[65%] w-[90%] md:h-[70%] md:w-[30%]">
+            <div className="relative w-[80%] md:w-[50%] h-[100%] ">
               {/* Juego en iframe */}
               <iframe
                 src="/PuduInvaders/Puduevade.html"

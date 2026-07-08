@@ -116,7 +116,7 @@ export default function Cards() {
   return (
     <>    
     
-      <div className="flex flex-col gap-3 bg-transparent">
+      <div className="relative flex flex-col bg-transparent">
         
         {/* Buttons */}
         <div className="flex flex-row w-full h-full justify-center items-center gap-1">
