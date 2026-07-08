@@ -45,48 +45,48 @@ export default function Header({ refs, onNavClick }) {
           speed="15s"
         >
           <nav className="flex flex-row items-center justify-center font-monospace no-underline
-                          text-[1rem] md:text-[0.8rem] lg:text-[1rem] xl:text-[1.2rem] 2xl:text-[1.5rem]
+                          text-[1rem] md:text-[0.8rem] lg:text-[1rem] xl:text-[1rem] 2xl:text-[1.2rem]
                           md:gap-[0.5rem] lg:gap-[1rem] xl:gap-[2rem]
                           px-[0.1rem]
                           py-[0.1rem]">
 
             <button  onClick={() => onNavClick(homeRef, "/Home")}
-                     className="bg-gray-900 rounded-3 shadow hover:bg-sky-400/50 whitespace-nowrap
+                     className="bg-gray-900 rounded-3 shadow whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
                                 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
 
               <ShinyText text={t("home")} disabled={false} className="custom-class" />
             </button>
 
             <button  onClick={() => onNavClick(aboutRef, "/About")}
-                     className="bg-gray-900 rounded-3 shadow hover:bg-sky-400/50 whitespace-nowrap
+                     className="bg-gray-900 rounded-3 shadow  whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
                                 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
 
               <ShinyText text={t("about")} disabled={false} className="custom-class" />
             </button>
 
             <button onClick={() => onNavClick(techRef, "/Technologies")}
-              className="bg-gray-900 rounded-3 shadow hover:bg-sky-400/50
+              className="bg-gray-900 rounded-3 shadow whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
                          md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
 
               <ShinyText text={t("technologies")} disabled={false} className="custom-class" />
             </button>
 
             <button onClick={() => onNavClick(workRef, "/Work")}
-              className="bg-gray-900 rounded-3 shadow hover:bg-sky-400/50
+              className="bg-gray-900 rounded-3 shadow whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
                         md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
 
               <ShinyText text={t("work")} disabled={false} className="custom-class" />
             </button>
             
             <button    onClick={() => onNavClick(personalProyectsRef, "/Personal_Proyects")}
-              className="bg-gray-900 rounded-3 shadow hover:bg-sky-400/50 whitespace-nowrap
+              className="bg-gray-900 rounded-3 shadow whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
                         md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
 
               <ShinyText text={t("personalProyects")} disabled={false} className="custom-class" />
             </button>
 
             <button onClick={() => onNavClick(galleryRef, "/Gallery")}
-              className="bg-gray-900 rounded-3 shadow hover:bg-sky-400/50
+              className="bg-gray-900 rounded-3 shadow whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
                          md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
 
               <ShinyText text={t("gallery")} disabled={false} className="custom-class" />

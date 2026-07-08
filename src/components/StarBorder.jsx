@@ -5,7 +5,7 @@ const StarBorder = ({
   className = "",
   color = "white",
   speed = "6s",
-  thickness = 1,
+  thickness = 0,
   children,
   ...rest
 }) => {
@@ -14,9 +14,9 @@ const StarBorder = ({
 
   return (
     <Component
-      className={`star-border-container ${className}`} 
+      className={`star-border-container ${className} border-black`} 
       style={{
-        padding: `${thickness}px 0`,
+        padding: `${thickness}px`,
         ...rest.style
       }}
       {...rest}
@@ -24,18 +24,18 @@ const StarBorder = ({
       <div
         className="border-gradient-bottom"
         style={{
-          background: `radial-gradient(circle, ${color}, transparent 10%)`,
+          background: `radial-gradient(circle, ${color}, transparent 50%)`,
           animationDuration: speed,
         }}
       ></div>
       <div
         className="border-gradient-top"
         style={{
-          background: `radial-gradient(circle, ${color}, transparent 10%)`,
+          background: `radial-gradient(circle, ${color}, transparent 50%)`,
           animationDuration: speed,
         }}
       ></div>
-      <div className="inner-content bg-transparent">{children}</div>
+      <div className="inner-content bg-transparent border-black">{children}</div>
     </Component>
   );
 };
