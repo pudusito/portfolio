@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 export default function PresentationCard() {
 
-  const { t } = useTranslation("about");
+  const { t } = useTranslation("whoim");
   
   return (
     <>

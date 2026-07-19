@@ -2,9 +2,11 @@
   "title_main": "What I do?",
   "paragraph1": "I turn ideas into functional and scalable digital solutions, focusing on robust, secure, and accessible results.",
   "paragraph2": "To achieve this, I apply agile methodologies, modular design, and SOLID principles, combining modern frameworks, optimized structures, and process automation to deliver reliable, efficient, and high-performance applications.",
-  "skills_title": "Skills",
-  "skill1": "Full Stack",
-  "skill2": "Operative Systems",
-  "skill3": "DataBases",
-  "skill4": "Data analysis"
+
+  "skill1": "Web Development",
+  "skill2": "Analisys and Data Bases",
+  "skill3": "Android",
+  "skill4": "Game Development Multiplataform",
+  "skill5": "Security",
+  "skill6": "end-to-end Cicle"
 }

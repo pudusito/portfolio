@@ -30,32 +30,6 @@ export default function Cards() {
       </button>
     </div>,
 
-    // 2. Courses
-    <div className="text-white w-80 h-50 md:w-150 md:h-150 tracking-wide leading-relaxed text-center border-2 bg-green-950/30 p-2 rounded-2xl flex flex-col items-center">
-      <span className="text-[2rem] font-bold text-white mb-4"> {t("card_courses_title")} </span>
-      <img
-        src="/assets/img/cs50certificado.png"
-        alt="cs50"
-        className="object-cover mb-4 rounded"
-      />
-    </div>,
-
-    // 3. Achievements
-    <div className="text-white w-80 h-50 md:w-120 md:h-120 tracking-wide leading-relaxed text-center border-2 bg-green-950/30 p-2 rounded-2xl flex flex-col items-center">
-      <span className="text-[2rem] font-bold mb-4"> {t("card_achievements_title")} </span>
-      <img
-        src="/assets/img/oraclect.png"
-        alt="oracle"
-        className="object-cover mb-4 rounded"
-      />
-    </div>,
-
-    // 4. Experience
-    <div className="text-white w-80 h-50 md:w-120 md:h-120 text-center border-2 bg-green-950/30 p-2 rounded-2xl">
-      <span className="text-[2rem] font-bold mb-4"> {t("card_experience_title")} </span>
-      <br />
-      <span className="text-[1rem]">{t("card_experience_text")}.</span>
-    </div>,
 
     // 5. Games
     <div className="text-white w-80 h-50 md:w-120 md:h-120 text-center border-2 bg-green-950/30 p-2 rounded-2xl flex flex-col justify-center items-center">
@@ -70,25 +44,6 @@ export default function Cards() {
       </span>
     </div>,
 
-    // 6. Hobbies
-    <div className="text-white w-80 h-50 md:w-120 md:h-120 text-center border-2 bg-green-950/30 p-2 rounded-2xl flex flex-col justify-center items-center">
-      <span className="text-[2rem] font-bold"> {t("card_hobbies_title")} <br /></span>
-      <span className="text-[1rem]">{t("card_hobbies_text")}</span>
-    </div>,
-
-    // 7. My history
-    <div className="text-white w-80 h-50 md:w-99 md:h-99 leading-relaxed text-center border-2 bg-green-950/30 p-2 rounded-2xl">
-      <span className="text-[2rem] font-bold">{t("card_history_title")}<br /></span>
-      <span className="text-[1rem]">
-        {t("card_history_text")}
-      </span>
-    </div>,
-
-    // 8. Testimonials
-    <div className="bg-green-950/30 text-white w-80 h-50 md:w-120 md:h-120 text-center border-2 p-2 rounded-2xl">
-      <span className="text-[2rem] font-bold">{t("card_testimonials_title")}<br /></span>
-      <span className="text-[1rem]">{t("card_testimonials_text")}</span>
-    </div>,
   ];
   
   const [showProfile, setShowProfile] = useState(false); //estado para mostrar perfil profesional
@@ -116,7 +71,7 @@ export default function Cards() {
   return (
     <>    
     
-      <div className="relative flex flex-col bg-transparent">
+      <div className="relative flex flex-col bg-transparent mt-15 mb-30">
         
         {/* Buttons */}
         <div className="flex flex-row w-full h-full justify-center items-center gap-1">
@@ -153,10 +108,24 @@ export default function Cards() {
                 style={{ scrollbarWidth: "thin", scrollbarColor: "red"}}>
 
             <span className="text-[2rem] md:text-[3rem] font-bold ">{t("professional_profile_title")}</span>
+
             <p className="text-[0.7rem] md:text-[1rem] leading-relaxed font-semibold text-start pt-2 px-4"
                 style={{textShadow: "1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black"}}>
                {t("professional_profile_text")}
             </p>
+
+            <div className="flex justify-center m-4">
+
+              <div className="flex flex-row gap-3 h-40">
+              <img src="/assets/img/oraclect.png"
+                className="object-contain w-50 border-2 border-black "
+              />
+              <img src="/assets/img/titulo.png"
+                className="object-contain w-50 border-2 border-black"
+              />
+              </div>
+            </div>
+
             <button
               onClick={() => setShowProfile(false)}
               className="mb-2 px-4 py-2 rounded bg-red-700 text-white"

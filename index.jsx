@@ -45,3 +45,5 @@ createRoot(document.getElementById('root')).render(
 
 //lenis (controla animacion de scroll)
 // npm install @studio-freight/lenis
+
+//npm install @react-three/postprocessing postprocessing

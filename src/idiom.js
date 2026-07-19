@@ -14,6 +14,7 @@ i18n
     ns: [
       "landing", 
       "header", 
+      "whoim",
       "about", 
       "sec1about", 
       "sec2about", 

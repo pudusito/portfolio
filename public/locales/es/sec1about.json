@@ -2,9 +2,11 @@
   "title_main": "Que hago?",
   "paragraph1": "Convierto ideas en soluciones digitales funcionales y escalables, enfocándome en resultados robustos, seguros y accesibles.",
   "paragraph2": "Para lograrlo, aplico metodologías ágiles, diseño modular y principios SOLID, combinando frameworks modernos, estructuras optimizadas y automatización de procesos para entregar aplicaciones confiables, eficientes y de alto rendimiento.",
-  "skills_title": "Habilidades",
-  "skill1": "Full Stack",
-  "skill2": "Sistemas Operativos",
-  "skill3": "Bases de Datos",
-  "skill4": "Análisis de Datos"
+
+  "skill1": "Desarrollo Web",
+  "skill2": "Analisis y Bases de Datos",
+  "skill3": "Android",
+  "skill4": "Desarrollo de Videojuegos Multiplataforma",
+  "skill5": "Seguridad",
+  "skill6": "Ciclo de extremo-a-extremo"
 }

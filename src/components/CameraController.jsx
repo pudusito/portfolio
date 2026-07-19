@@ -16,8 +16,8 @@ export default function CameraController({ moonRef, earthRef, sunRef, blackHoleR
     // Mapea rutas a refs y fallback a posición fija
     const routeRef = {
       '/home' : earthRef,
-      '/about': earthRef,
-      '/technologies': moonRef,
+      '/whoim': earthRef,
+      '/about': moonRef,
       '/work': sunRef,
       '/personal_proyects': blackHoleRef,
       '/gallery': blackHoleRef,
@@ -32,8 +32,8 @@ export default function CameraController({ moonRef, earthRef, sunRef, blackHoleR
       // Posiciones fijas como fallback
       const fixedPositions = {
         '/home': new THREE.Vector3(0, 0, 0),
-        '/about': new THREE.Vector3(0, 0, 8),
-        '/technologies': new THREE.Vector3(0, 0, 12),
+        '/whoim': new THREE.Vector3(0, 0, 8),
+        '/about': new THREE.Vector3(0, 0, 12),
         '/work': new THREE.Vector3(0, 0, 22),
         '/personal_proyects': new THREE.Vector3(0, 0, 30),
         '/gallery': new THREE.Vector3(0, 0, 40),

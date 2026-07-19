@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import Divisor from '../components/divisor';
 
 import { useTranslation } from "react-i18next";
 
@@ -40,6 +41,10 @@ export default function WhatIdo() {
           <span className="permanent-marker-regular text-[3rem] md:text-[5rem] text-center drop-shadow-lg">
             {t("title_main")}
           </span>
+
+          <div className='w-full flex justify-center'>
+            <Divisor imagen={1}></Divisor>
+          </div>
     
           <div className="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-4 sm:mt-6 md:mt-8 lg:mt-12 max-w-4xl mx-auto">
             <p className="mb-4 sm:mb-6">
@@ -52,22 +57,21 @@ export default function WhatIdo() {
         </div>
 
         {/* Skills Section */}
-        <div className="flex flex-wrap justify-center items-stretch mt-8 sm:mt-12 md:mt-16 lg:mt-20 px-4">
-          <div ref={skillsRef} className="text-white tracking-wide leading-relaxed border-2 rounded-lg shadow-lg bg-white/5 w-fit text-center">       
-            <div className="flex items-center">
-              <div className="w-full text-center text-lg sm:text-xl md:text-2xl border-b-2 py-2 sm:py-3 font-semibold">
-                {t("skills_title")}
-              </div>
+        <div className="flex flex-wrap justify-center items-stretch mt-8">
+          <div ref={skillsRef} className="text-white tracking-wide leading-relaxed text-center">       
+
+            <div className="flex flex-col text-nowrap text-sm sm:text-base md:text-lg gap-2">
+              <div className="">• {t("skill1")}</div>
+              <div className="">• {t("skill2")}</div>
+              <div className="">• {t("skill3")}</div>
+              <div className="">• {t("skill4")}</div>
+              <div className="">• {t("skill5")}</div>
+              <div className="">• {t("skill6")}</div>
             </div>
-            
-            <div className="text-sm sm:text-base md:text-lg lg:text-xl p-3 sm:p-4 md:p-6 space-y-2 px-5">
-              <div>{t("skill1")}</div>
-              <div>{t("skill2")}</div>
-              <div>{t("skill3")}</div>
-              <div>{t("skill4")}</div>
-            </div>
+
           </div>
         </div>
+
       </div>
     </>
   )

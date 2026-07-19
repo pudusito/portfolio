@@ -39,7 +39,7 @@ export default function Gallery() {
 
         <div className="grid grid-cols-2 gap-[0.5rem] my-[2rem] md:grid-cols-4 md:my-[5rem] md:px-[5rem] md:gap-[2.5rem] ">
           {imagenes.map((img, i) => (
-            <figure key={img.id} className="w-[100%] h-[100%] md:w-[80%] md:h-[80%] flex flex-col items-center justify-center overflow-hidden rounded-2">
+            <figure key={img.id} className="w-[100%] h-[100%] md:w-[80%] md:h-[80%] flex flex-col items-center justify-center overflow-hidden rounded-2 border-2 border-white">
               <img
                 onClick={() => {
                   setIndex(i);

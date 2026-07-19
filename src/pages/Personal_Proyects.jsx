@@ -22,14 +22,14 @@ export default function Personal_Proyects() {
         <Divisor imagen={1}></Divisor>
       </div>
       
-      <div className="grid grid-cols-1 md:flex-row gap-3 mt-[2rem] w-full h-full md:w-[50%] md:h-[50%] ">
+      <div className="grid grid-cols-1 md:flex-row gap-3 mt-[2rem] w-full h-full">
 
 
         {/* Game */}
-        <SpotlightCard className="custom-spotlight-card" spotlightColor="#008A69">
-          <div className="flex flex-col justify-center items-center w-full h-full border-2 rounded-4xl ">
-            <img src="/assets/img/pudulogoinvader.png" alt="PuduGame" name="pudugame" className="w-full h-full object-fit rounded-t-4xl"/>
-            <span className="text-white text-[1rem] md:text-[1.2rem] font-semibold text-center whitespace-nowrap m-[1rem]">
+        <SpotlightCard className="custom-spotlight-card h-fit w-fit border-2 rounded-4xl bg-transparent flex justify-self-center" spotlightColor="#008A69">
+          <div className="flex flex-col justify-center items-center border-2 rounded-2xl">
+            <img src="/assets/img/pudulogoinvader.png" alt="PuduGame" name="pudugame" className="w-100 object-contain rounded-t-4xl"/>
+            <span className="text-white text-[1rem] md:text-[1.2rem] font-semibold text-center whitespace-nowrap m-[1rem] border-b-1">
               {t("card1_title")}
             </span>
             <button onClick={() => setShowGame(true)}

@@ -4,20 +4,13 @@ import ShinyText from '../components/ShinyText';
 import StarBorder from '../components/StarBorder';
 import { useState } from "react";
 
-import i18n from "../idiom";
 import { useTranslation } from "react-i18next";
 
 export default function Header({ refs, onNavClick }) {
-  const { homeRef, aboutRef, techRef, workRef, personalProyectsRef, galleryRef } = refs;
+  const { homeRef, whoimRef, aboutRef, workRef, personalProyectsRef, galleryRef } = refs;
   const [open, setOpen] = useState(false);
 
-  const [idiom, setIdiom] = useState("es");
 
-  const toggleLanguage = () => {
-    const newLang = idiom === "es" ? "en" : "es";
-    i18n.changeLanguage(newLang);
-    setIdiom(newLang);
-  };
 
   const { t } = useTranslation("header");
 
@@ -57,18 +50,18 @@ export default function Header({ refs, onNavClick }) {
               <ShinyText text={t("home")} disabled={false} className="custom-class" />
             </button>
 
+            <button  onClick={() => onNavClick(whoimRef, "/Whoim")}
+                     className="bg-gray-900 rounded-3 shadow  whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
+                                md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
+
+              <ShinyText text={t("whoim")} disabled={false} className="custom-class" />
+            </button>
+
             <button  onClick={() => onNavClick(aboutRef, "/About")}
                      className="bg-gray-900 rounded-3 shadow  whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
                                 md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
 
               <ShinyText text={t("about")} disabled={false} className="custom-class" />
-            </button>
-
-            <button onClick={() => onNavClick(techRef, "/Technologies")}
-              className="bg-gray-900 rounded-3 shadow whitespace-nowrap hover:bg-cyan-300/40 hover:scale-120
-                         md:px-3 md:py-2 lg:px-4 lg:py-2.5 xl:px-5 xl:py-3">
-
-              <ShinyText text={t("technologies")} disabled={false} className="custom-class" />
             </button>
 
             <button onClick={() => onNavClick(workRef, "/Work")}
@@ -97,22 +90,6 @@ export default function Header({ refs, onNavClick }) {
         </StarBorder>
       </div>
 
-
-       {/* Botón de idioma */}
-      <div onClick={toggleLanguage}
-           className="absolute items-center justify-start
-                      top-1/2 -translate-y-1/2
-                      right-[4rem] sm:right-[10rem] md:right-[0rem] lg:right-[0.4rem] xl:right-[0.4rem] 2xl:right-[0.4rem]
-                      w-20 h-10 md:w-10 md:h-9 flex items-center rounded-full p-1 cursor-pointer transition-colors
-                      bg-cyan-700/30 hover:bg-cyan-700/90
-                      border"
-      >
-        <div className={`bg-white w-8 h-8 md:w-4 md:h-4 rounded-full transform transition-transform flex items-center justify-center text-xs font-bold
-             ${idiom === "en" ? "translate-x-full" : "translate-x-0"}`}>
-             {idiom.toUpperCase()}
-        </div>
-
-      </div>
 {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
 {/* ---------------------------------------------------------------------- Menu Movil --------------------------------------------------------------------------------- */}
 {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
@@ -164,14 +141,19 @@ export default function Header({ refs, onNavClick }) {
             {/* Navegacion men amburguesa */}
             <ul className="flex flex-col text-[1.5rem] text-gray-100 font-medium divide-gray-700/50 m-[1rem] w-full mt-1 px-6">
 
+              <li onClick={() => { onNavClick(homeRef, "/Home"); setOpen(false); }}
+                  className="cursor-pointer px-[2rem] py-2 transition border-y-2 border-gray-800 active:text-green-700 whitespace-nowrap">
+                {t("home")}
+              </li>
+
+              <li onClick={() => { onNavClick(whoimRef, "/Whoim"); setOpen(false); }}
+                  className="cursor-pointer px-[2rem] py-2 transition border-y-2 border-gray-800 active:text-green-700 whitespace-nowrap">
+                {t("whoim")}
+              </li>
+
               <li onClick={() => { onNavClick(aboutRef, "/About"); setOpen(false); }}
                   className="cursor-pointer px-[2rem] py-2 transition border-y-2 border-gray-800 active:text-green-700 whitespace-nowrap">
                 {t("about")}
-              </li>
-
-              <li onClick={() => { onNavClick(techRef, "/Technologies"); setOpen(false); }}
-                  className="cursor-pointer px-[2rem] py-2 transition border-b-2 border-gray-800 active:text-green-700 whitespace-nowrap">
-                {t("technologies")}
               </li>
 
               <li onClick={() => { onNavClick(workRef, "/Work"); setOpen(false); }}

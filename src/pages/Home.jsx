@@ -2,9 +2,22 @@ import ModelChar from '../components/charactermodel'
 import GradientText from "../components/TextMain";
 import { useTranslation } from "react-i18next";
 
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 export default function Home() {
 
   const { t } = useTranslation("welcome");
+
+  /* reinicia la animacion del model al cargar home */
+  const location = useLocation();
+  const [modelKey, setModelKey] = useState(0);
+  
+  useEffect(() => {
+    if (location.pathname === "/Home") {
+      setModelKey((prev) => prev + 1);
+    }
+  }, [location.pathname]);
 
   return (
     <>
@@ -37,7 +50,7 @@ export default function Home() {
           
         </div>
 
-        <ModelChar />
+        <ModelChar key={modelKey} />
 
       </section>
     </>

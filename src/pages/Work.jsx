@@ -9,7 +9,7 @@ export default function Work() {
   const { t } = useTranslation("work");
 
   return (
-    <section className="relative w-full h-full flex flex-col justify-center items-center isolate overflow-hidden bg-transparent p-6 ">
+    <section className="relative w-full h-full flex flex-col justify-center items-center isolate overflow-hidden bg-transparent pt-4">
 
       <span className="text-[2rem] md:text-[5rem] text-white permanent-marker-regular drop-shadow-lg flex justify-center items-center text-center"
            style={{textShadow: "3px 3px 0 black, -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black"}}>
@@ -20,7 +20,7 @@ export default function Work() {
         <Divisor imagen={1}></Divisor>
       </div>
       
-      <div className="grid grid-cols-1 md:flex-row gap-3 mt-[2rem] w-full h-full md:w-[50%] md:h-[50%] ">
+      <div className="w-full h-full mt-[2rem]  md:w-[30%]">
 
         {/* Github */}
         <SpotlightCard className="custom-spotlight-card" spotlightColor="#5C004A">

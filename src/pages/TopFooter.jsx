@@ -53,10 +53,10 @@ export default function TopFooter({ mainRef }) {
     const isLast = currentIndex >= sections.length - 1;
 
     if (isLast) {
-      const welcome = document.getElementById("welcome");
-      if (welcome) {
+      const home = document.getElementById("home");
+      if (home) {
         container.scrollTo({
-          top: welcome.offsetTop,
+          top: home.offsetTop,
           behavior: "smooth",
         });
       }

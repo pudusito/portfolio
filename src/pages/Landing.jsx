@@ -7,8 +7,12 @@ import { useState } from "react";
 import Preloader from "../components/preLoader";
 import Scene from "./Scene";
 
+import i18n from "../idiom";
+import { useTranslation } from "react-i18next";
 
 export default function Landing() {
+  const { t } = useTranslation("landing");
+
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true); 
 
@@ -17,6 +21,15 @@ export default function Landing() {
   };
 
   useGLTF.preload('/assets/glb/neonearth.glb');
+
+
+  const [idiom, setIdiom] = useState("es");
+
+  const toggleLanguage = () => {
+    const newLang = idiom === "es" ? "en" : "es";
+    i18n.changeLanguage(newLang);
+    setIdiom(newLang);
+  };
 
   return (
     <>
@@ -33,25 +46,50 @@ export default function Landing() {
         </div>
 
         <section className="relative bg-transparent h-full w-full">
+
           <div className="flex flex-col md:flex-row items-center justify-center h-full w-full gap-8">
-            <div className='flex flex-col justify-center items-center text-center z-10 px-4'>
+
+            <div className='flex flex-col justify-center items-center text-center z-10 gap-4'>
+
               <GradientText
                 colors={["#40ffaa", "#40b0ff", "#4079ff", "#8a00ff", "#b34fff"]}
                 animationSpeed={10}
                 showBorder={false}
                 className="flex flex-col md:flex-row text-[clamp(2rem,5vw,6rem)] whitespace-nowrap">
-                 &lt;/&gt;  ¡ Hello World !<br/>
+                 &lt;/&gt; ¡{t("title")}!<br/>
               </GradientText>
+
+              <GradientText
+                colors={["#40ffaa", "#40b0ff", "#4079ff", "#8a00ff", "#b34fff"]}
+                animationSpeed={10}
+                showBorder={false}
+                className="flex flex-col md:flex-row text-[clamp(1.2rem,2vw,2rem)] whitespace-nowrap">
+                 {t("idiom")}<br/>
+              </GradientText>
+
+              {/* Botón de idioma */}
+              <div onClick={toggleLanguage}
+                   className="w-20 h-fit flex items-center rounded-full p-1 cursor-pointer transition-colors
+                              bg-cyan-700/30 hover:bg-cyan-700/90
+                              border"
+              >
+                <div className={`bg-white w-9 h-5 rounded-full transform transition-transform flex items-center justify-center text-xs font-bold
+                     ${idiom === "en" ? "translate-x-full " : "translate-x-0"}`}>
+                     {idiom.toUpperCase()}
+                </div>
+                
+              </div>
         
               <div className="flex justify-center items-center text-center">
               <button 
                 onClick={goToHome} 
                 className="w-24 h-12 sm:w-28 sm:h-14 md:w-32 md:h-16 lg:w-36 lg:h-18 bg-gradient-to-r from-[#40ffa9a4] via-[#4079ffb4] to-[#7725de] hover:scale-105 transition-transform duration-300 border-2 border-black/99 rounded-4 hover:border-cyan-500">
                 <span className="text-center text-sm sm:text-base md:text-lg text-black font-semibold">
-                  GO IN<br/> 
+                  {t("button")}<br/> 
                 </span>
               </button>
               </div>
+
             </div>
         
             <div className="flex justify-center backdrop-blur-sm bg-[#010a5038] rounded-full">
