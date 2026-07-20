@@ -12,7 +12,7 @@ export default function PresentationCard() {
   return (
     <>
       {/* Presentation Card */}
-      <section className='relative w-full h-full pt-[5%] bg-transparent flex justify-center align-center'>
+      <section className='relative w-full h-full bg-transparent flex justify-center align-center'>
 
         {/* marco contenedor */}
         <div className='flex flex-col justify-center items-center w-fit h-full text-white tracking-wide text-center'>

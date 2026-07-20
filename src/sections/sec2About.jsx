@@ -9,7 +9,7 @@ export default function Cards() {
   // Todas las tarjetas
   const cards = [
     // 1. Education
-    <div className="w-80 h-50  md:w-full md:h-full flex flex-col justify-center items-center text-center border-2 bg-green-950/30 rounded-2xl p-2 border-white">
+    <div className="w-80 h-50  md:w-full md:h-full flex flex-col justify-center items-center text-center border-2 border-black bg-green-950/30 rounded-2xl p-2">
       <span className="text-[2rem] font-bold text-white">
         {t("card_education_title")}  <i className="bi bi-book text-red-700"></i>
       </span>
@@ -32,14 +32,13 @@ export default function Cards() {
 
 
     // 5. Games
-    <div className="text-white w-80 h-50 md:w-120 md:h-120 text-center border-2 bg-green-950/30 p-2 rounded-2xl flex flex-col justify-center items-center">
+    <div className="text-white w-80 h-50 md:w-120 md:h-120 text-center border-2 border-black bg-green-950/30 p-2 rounded-2xl flex flex-col justify-center items-center">
       <span className="text-[2rem] font-bold">{t("card_games_title")}<br /></span>
 
       <div className="flex justify-center items-center rounded-full w-15 h-15">
         <img src="/assets/img/challengerlogo.png"></img>
       </div>
       <span className="text-[1rem]">
-        [2013-2017] <br />
         {t("card_games_text")}
       </span>
     </div>,
@@ -77,7 +76,7 @@ export default function Cards() {
         <div className="flex flex-row w-full h-full justify-center items-center gap-1">
 
           <button onClick={prevCard}
-                  className="px-3 py-1 rounded-2 border-2 border-white hover:bg-indigo-500 transition">
+                  className="px-3 py-1 rounded-2 border-2 hover:bg-cyan-100/10 transition">
             <i className="bi bi-chevron-double-left text-white"></i>
           </button>
 
@@ -93,7 +92,7 @@ export default function Cards() {
           </div>
 
           <button onClick={nextCard}
-                  className="px-3 py-1 rounded-2 border-2 border-white hover:bg-indigo-500 transition">
+                  className="px-3 py-1 rounded-2 border-2 hover:bg-cyan-100/10 transition">
             <i className="bi bi-chevron-double-right text-white"></i>
           </button>
         </div>
@@ -104,7 +103,7 @@ export default function Cards() {
       {/* Modal Perfil Profesional */}
       {showProfile && (
         <div className="fixed w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center bg-black/80 z-50 overflow-auto">
-          <div className=" bg-black/50 text-white w-[90%] h-[65%] md:w-[50%] md:h-[50%] overflow-y-auto text-center border-2 border-white shadow-[4px_4px_10px_#000350,_-4px_-4px_10px_#000350,4px_-4px_10px_#000350,-4px_4px_10px_#000350]"
+          <div className=" bg-black/50 text-white w-[90%] h-[65%] md:w-[50%] md:h-[50%] overflow-y-auto text-center neon-border"
                 style={{ scrollbarWidth: "thin", scrollbarColor: "red"}}>
 
             <span className="text-[2rem] md:text-[3rem] font-bold ">{t("professional_profile_title")}</span>

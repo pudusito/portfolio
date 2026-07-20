@@ -110,7 +110,7 @@ function AppContent() {
             <section ref={whoimRef} id="whoim" className="h-[100vh]"><Whoim /></section>
             <section ref={aboutRef} id="about"><About /></section>
             <section ref={workRef} id="work" className="h-[100vh]"><Work /></section>
-            <section ref={personalProyectsRef} id="personal_proyects" className="h-[100vh]"><Personal_Proyects /></section>
+            <section ref={personalProyectsRef} id="personal_proyects"><Personal_Proyects /></section>
             <section ref={galleryRef} id="gallery" className="h-[100vh]"><Gallery /></section>
             <section ref={footerRef}><Footer /></section>
           </>

@@ -11,9 +11,9 @@ export default function Personal_Proyects() {
   const { t } = useTranslation("personalProyects");
 
   return (
-    <section className="relative w-full h-full flex flex-col justify-center items-center overflow-hidden bg-transparent p-6 ">
+    <section className="relative w-full h-full bg-transparent p-6 pt-[5%]">
 
-      <span className="text-[2rem] md:text-[5rem] text-white permanent-marker-regular drop-shadow-lg flex justify-center items-center text-center"
+      <span className="text-[2rem] md:text-[4.5rem] text-white permanent-marker-regular drop-shadow-lg flex justify-center items-center text-center"
            style={{textShadow: "3px 3px 0 black, -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black"}}>
         {t("title")}
       </span>
@@ -22,14 +22,29 @@ export default function Personal_Proyects() {
         <Divisor imagen={1}></Divisor>
       </div>
       
-      <div className="grid grid-cols-1 md:flex-row gap-3 mt-[2rem] w-full h-full">
+      <div className="grid gap-5 mt-[2rem] w-full h-full">
 
+        {/* Qh */}
+        <SpotlightCard className="custom-spotlight-card neon-border bg-transparent w-[90%] md:w-[50%] justify-self-center" spotlightColor="#008A69">
+          <div className="flex flex-col justify-center items-center rounded-4xl">
+            <img src="/assets/img/qh.png" className="object-contain rounded-2xl"/>
+            <span className="text-white text-[1rem] md:text-[1.2rem] font-semibold text-center m-[1rem]">
+              {t("card2_title")}
+            </span>
+            <button onClick={() => window.location.href = 'https://queensheartgames.com/'}
+                    className="mt-auto px-4 py-2 border-2 rounded text-white border-black bg-green-700/50 hover:bg-green-700 hover:scale-110 transition-transform duration-200">
+              <span className='text-[0.8rem] md:text-[1rem] whitespace-nowrap w-full'>
+                {t("card2_button")}
+              </span>
+            </button>
+          </div>
+        </SpotlightCard>
 
         {/* Game */}
-        <SpotlightCard className="custom-spotlight-card h-fit w-fit border-2 rounded-4xl bg-transparent flex justify-self-center" spotlightColor="#008A69">
-          <div className="flex flex-col justify-center items-center border-2 rounded-2xl">
-            <img src="/assets/img/pudulogoinvader.png" alt="PuduGame" name="pudugame" className="w-100 object-contain rounded-t-4xl"/>
-            <span className="text-white text-[1rem] md:text-[1.2rem] font-semibold text-center whitespace-nowrap m-[1rem] border-b-1">
+        <SpotlightCard className="custom-spotlight-card neon-border bg-transparent w-[90%] md:w-[50%] justify-self-center" spotlightColor="#008A69">
+          <div className="flex flex-col items-center rounded-4xl">
+            <img src="/assets/img/pudulogoinvader.png" className="object-contain"/>
+            <span className="text-white text-[1rem] md:text-[1.2rem] font-semibold text-center m-[1rem]">
               {t("card1_title")}
             </span>
             <button onClick={() => setShowGame(true)}
@@ -59,6 +74,7 @@ export default function Personal_Proyects() {
             </div>
           </div>
         )} 
+
 
       </div>
     </section>

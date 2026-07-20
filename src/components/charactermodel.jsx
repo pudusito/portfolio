@@ -31,8 +31,9 @@ function Modelchar() {
 
   return (
     <Trail
-      width={500}
-      length={30}
+      width={250}
+      length={25}
+      decay={0.5}
       color="cyan"
       attenuation={(t) => t * t}
     >

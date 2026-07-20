@@ -26,7 +26,7 @@ export default function Gallery() {
 
   return (
     <>
-      <section className="relative w-full h-full isolate overflow-hidden bg-transparent p-[1rem]">
+      <section className="relative w-full h-full isolate overflow-hidden bg-transparent pt-[5%]">
         
         <span className="text-[3rem] md:text-[5rem] text-white permanent-marker-regular drop-shadow-lg flex justify-center items-center text-center"
            style={{textShadow: "3px 3px 0 black, -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black"}}>
