@@ -4,13 +4,7 @@ export function Whoim() {
   
   return (
     <>
-
-      <div className="relative w-full h-full bg-transparent">
-
         <PresentationCard />
-
-      </div>
-
     </>
   );
 }
